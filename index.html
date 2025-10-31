@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celulares Apple & Samsung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Celulares Apple & Samsung</h1>
+    <p>Conoce los modelos más recientes de las marcas líderes en tecnología móvil</p>
+  </header>
+
+  <nav>
+    <a href="#apple">Apple</a>
+    <a href="#samsung">Samsung</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="apple" class="brand-section slide-up">
+    <h2>🍏 Apple</h2>
+    <div class="product-grid">
+      <div class="product-card fade-in-delay">
+        <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-16-Pro-lineup-hero-geo-240909_big.jpg.large.jpg" alt="iPhone 16 Pro">
+        <h3>iPhone 16 Pro</h3>
+        <p>El nuevo chip A18 Pro ofrece un rendimiento sin igual, cámara avanzada y diseño en titanio.</p>
+      </div>
+
+      <div class="product-card fade-in-delay">
+        <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-15-lineup-hero-230912_big.jpg.large.jpg" alt="iPhone 15">
+        <h3>iPhone 15</h3>
+        <p>Diseño elegante con Dynamic Island, cámara de 48 MP y el potente chip A16 Bionic.</p>
+      </div>
+
+      <div class="product-card fade-in-delay">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-hero" alt="iPhone SE 3">
+        <h3>iPhone SE (3ra generación)</h3>
+        <p>Potencia y rendimiento en un formato compacto. Ideal para quienes prefieren la simplicidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="samsung" class="brand-section slide-up">
+    <h2>🔷 Samsung</h2>
+    <div class="product-grid">
+      <div class="product-card fade-in-delay">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/latin_en/sm-s928blbgltm/gallery/latin-en-galaxy-s24-ultra-s928-491090-sm-s928blbgltm-539297739?$720_576_PNG$" alt="Galaxy S24 Ultra">
+        <h3>Galaxy S24 Ultra</h3>
+        <p>Procesador Snapdragon 8 Gen 3, cámara de 200 MP y herramientas avanzadas de IA.</p>
+      </div>
+
+      <div class="product-card fade-in-delay">
+        <img src="https://images.samsung.com/is/image/samsung/assets/global/galaxy-z-fold6/gallery/gray/1.jpg?$720_576_PNG$" alt="Galaxy Z Fold 6">
+        <h3>Galaxy Z Fold 6</h3>
+        <p>Pantalla plegable AMOLED 2X con rendimiento de nivel profesional y multitarea extrema.</p>
+      </div>
+
+      <div class="product-card fade-in-delay">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/mx/sm-a556elbdgto/gallery/mx-galaxy-a55-5g-a556-sm-a556elbdgto-538042595?$720_576_PNG$" alt="Galaxy A55 5G">
+        <h3>Galaxy A55 5G</h3>
+        <p>Excelente rendimiento y cámara de alta resolución a un precio accesible.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="fade-in">
+    <h2>Contacto</h2>
+    <p>Este sitio es informativo. No vendemos equipos, solo compartimos las últimas novedades del mundo móvil.</p>
+    <p>© 2025 Celulares Apple & Samsung | Proyecto académico</p>
+  </footer>
+
+  <script>
+    // Detecta el scroll y aplica animación
+    const elements = document.querySelectorAll('.fade-in, .fade-in-delay, .slide-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
